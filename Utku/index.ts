@@ -1,63 +1,118 @@
-// let doctor: { fname: string, lname: string, salary: number, printInfo: Function } = {
-//   fname: "John",
-//   lname: "Doe",
-//   salary: 2000,
-//   printInfo: function () {
-//     return `${this.fname} ${this.lname}, with a salary of: ${this.salary}`;
+
+
+let Person: { Name: string, Jobtitle: string, Age: number, info: Function } = {
+  Name: "Utku",
+  Jobtitle: "Softwareengineer",
+  Age: 15,
+  info: function () {
+    return `Hello there, My name is ${this.Name} and I am ${this.Age} years old, and I am a ${this.Jobtitle}`;
+  }
+};
+
+
+console.log(Person.info())
+
+
+//----------------------------------------B A S I C   1   F I N I S H E D------------------------------------------^
+
+
+class Persons   {
+  
+  jobLocation: string;
+  Salary: number;
+
+
+  constructor(jobLocation: string, Salary: number, printInfo: Function ) {
+    this.jobLocation = jobLocation;
+    this.Salary = Salary;
+
+  }
+
+  printInfo() {
+    return `and I get ${this.Salary} every month, and I work in ${this.jobLocation}`;
+
+  }
+}
+
+
+let Personen1 = new Persons("Vienna",  3600, []);
+console.log(Personen1.printInfo());
+
+
+//----------------------------------------B A S I C   2   F I N I S H E D------------------------------------------^
+
+
+
+
+// class Vehicles  	{
+
+//   Motorbikes: string;
+//   Trucks: string;
+  
+//   constructor(Motorbikes: string, Trucks: string) {
+//     this.Motorbikes = Motorbikes;
+//     this.Trucks = Trucks;
+
 //   }
-// };
 
-// console.log(doctor.fname);
+// }
 
-// console.log(doctor.printInfo());
+class Vehicles  	{
 
-interface DoctorType {
-    fname: string;
-    lname: string;
-    salary: number;
-    printInfo?: Function;
-  }
-  
-  let arrDoctor: Array<DoctorType> = [];
-  
-  
-  class HospitalEmployee {
-    fname: string;
-    lname: string;
-    salary: number;
-  
-    constructor(fname: string, lname: string, salary: number) {
-      this.fname = fname;
-      this.lname = lname;
-      this.salary = salary;
-  
-      arrDoctor.push(this);
+
+    class  Motorbikes   {
+
+price: number;
+year: number;
+fuelType: string;
+seats: number;
+kilometers: number;
+
+
+        constructor(price: number, year: number, fuelType: string, seats: number, kilometers: number) {
+  this.price = price
+  this.year = year
+  this.fuelType = fuelType
+  this.seats = seats
+  this.kilometers = kilometers
+        }
+
     }
-  
-    printInfo() {
-      return `${this.fname} ${this.lname}, with a salary of: ${this.salary}`;
+    let Motor = new Motorbikes(4900, 2016, "benzin", 2, 522,  []);
+console.log(Motor)
+
+
+
+    class Trucks         {
+
+      price: number;
+      year: number;
+      fuelType: string;
+      seats: number;
+      kilometers: number;
+
+
+      constructor(price: number, year: number, fuelType: string, seats: number, kilometers: number) {
+        this.price = price
+        this.year = year
+        this.fuelType = fuelType
+        this.seats = seats
+        this.kilometers = kilometers
+              }
     }
-  }
-  
-  class Doctor extends HospitalEmployee {
-    insurances: Array<string>;
-  
-    constructor(fname: string, lname: string, salary: number, insurances: Array<string>) {
-      super(fname, lname, salary);
-      this.insurances = insurances;
-    }
-  
-    printInfo() {
-      return `${super.printInfo()}, and he have ${this.insurances}`;
-    }
-  }
-  
-  let doctor = new Doctor("John", "Doe", 2000, ["AAA", "BBB"]);
-  console.log(doctor.printInfo());
-  
-  
-  // let doctor: { fname: string, lname: string, salary: number, printInfo: Function } = new Doctor("John", "Doe", 2000);
-  // let doctor2 : { fname: string, lname: string, salary: number, printInfo: Function } = new Doctor("test","test", 3000)
-  
-  // console.log(doctor.printInfo());
-  
+    let Truck = new Trucks(34999, 2012, "diesel", 6, 19051,  []);
+console.log(Truck)
+
+
+
+
+}
+
+//----------------------------------------A D V A N C E D   F I N I S H E D------------------------------------------^
+
+
+
+
+
+
+

@@ -8,7 +8,7 @@ let Person = {
     }
 };
 console.log(Person.info());
-//----------------------------------------B A S I C 1  F I N I S H E D------------------------------------------^
+//----------------------------------------B A S I C   1   F I N I S H E D------------------------------------------^
 class Persons {
     constructor(jobLocation, Salary, printInfo) {
         this.jobLocation = jobLocation;
@@ -20,7 +20,7 @@ class Persons {
 }
 let Personen1 = new Persons("Vienna", 3600, []);
 console.log(Personen1.printInfo());
-//----------------------------------------B A S I C 2  F I N I S H E D------------------------------------------^
+//----------------------------------------B A S I C   2   F I N I S H E D------------------------------------------^
 // class Vehicles  	{
 //   Motorbikes: string;
 //   Trucks: string;
